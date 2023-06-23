@@ -24,6 +24,7 @@ setInterval(async () => {
   // K = C + 273,15.
   if (date.getHours() === 6 && date.getMinutes() === 0) {
     await bot.sendMessage(chatId, `Доброе утро`);
+    await bot.sendSticker(msg.chat.id, obj.stickersArr[getRandomInt(0, obj.stickersArr.length - 1)])
     await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=Zelenograd,ru&APPID=${obj.tokenWeather}`)
     .then(function (response) {
       bot.sendMessage(chatId, `Погода в Зеленограде сейчас ${Math.round(response.data.main.temp - 273.15)}°C. Чувствуется как ${Math.round(response.data.main.feels_like - 273.15)}°C. Скорость ветра ${response.data.wind.speed} м/c. Влажность ${response.data.main.humidity}%`);
