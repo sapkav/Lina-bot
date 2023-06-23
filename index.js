@@ -6,8 +6,6 @@ import obj from '../tg bo/token.js';
 
 process.env["NTBA_FIX_350"] = 1;
 
-const token = '6080535377:AAEjS9BpyEHCNISq-D-r2wPY3aWSkesR4IE';
-
 const imgObj = {
     kiss: '../loveBot/img/kiss.jpg',
 }
@@ -18,7 +16,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-const bot = new telegramApi(token, {polling: true});
+const bot = new telegramApi(obj.tgToken, {polling: true});
 let chatId;
 
 setInterval(async () => {
