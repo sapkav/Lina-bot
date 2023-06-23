@@ -23,7 +23,7 @@ setInterval(async () => {
   const date = new Date();
   // K = C + 273,15.
   if (date.getHours() === 6 && date.getMinutes() === 0) {
-    await bot.sendMessage(chatId, `Доброе утро`);
+    await bot.sendMessage(chatId, `Доброе утро, любовь моя`);
     await bot.sendSticker(msg.chat.id, obj.stickersArr[getRandomInt(0, obj.stickersArr.length - 1)])
     await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=Zelenograd,ru&APPID=${obj.tokenWeather}`)
     .then(function (response) {
