@@ -2,7 +2,7 @@
 // const axios = require('axios');
 import telegramApi from 'node-telegram-bot-api';
 import axios from 'axios';
-import obj from '../tg bo/token.js';
+import obj from './token';
 
 process.env["NTBA_FIX_350"] = 1;
 
