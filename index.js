@@ -7,7 +7,7 @@ import obj from './token.js';
 process.env["NTBA_FIX_350"] = 1;
 
 const imgObj = {
-    kiss: '../loveBot/img/kiss.jpg',
+    kiss: './img/kiss.jpg',
 }
 
 function getRandomInt(min, max) {
